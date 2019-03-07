@@ -26,6 +26,7 @@
                       <ul class=\"w3-ul\">
                           <li class="w3-hover-sand">Project Name:<%=project.getName()%></li>
                           <li class="w3-hover-sand">Project ID:<%=project.getId()%></li>
+                          <li class="w3-hover-sand">Project Description:<%=project.getDescription()%></li>
                           <%
                           List<Task> taskList = (List<Task>) session.getAttribute("tasks");
                           if (taskList != null || !taskList.isEmpty())

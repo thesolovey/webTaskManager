@@ -24,14 +24,14 @@
                     if (names != null && !names.isEmpty()) {
                          for (Project project : names)
                               { %>
-                               <table class="w3-table-all w3-hoverable">
+                               <table class="w3-table w3-striped w3-bordered">
                                   <tr>
                                     <th>Project Name:   <%=project.getName()%></th>
                                     <th>Project ID:   <%=project.getId()%></th>
+                                    <th>Project Description: <%=project.getDescription()%></th>
                                     <form method="post">
-                                    <th><button type="submit" name="projectId" value="<%=project.getId()%>" class="w3-btn w3-round-large" onclick="location.href='/projectOpen'">to Open Project</button></th>
+                                    <th><button type="submit" name="projectId" value="<%=project.getId()%>" class="w3-btn w3-round-large" >to Open Project</button></th>
                                     </form>
-
                                   </tr>
                                </table>
 

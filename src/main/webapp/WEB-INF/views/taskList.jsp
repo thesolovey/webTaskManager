@@ -24,14 +24,15 @@
                     if (names != null && !names.isEmpty()) {
                          for (Task task: names)
                               { %>
-                               <table class="w3-table-all w3-hoverable">
+                               <table class="w3-table w3-striped w3-bordered">
                                   <tr>
-                                    <th>Task Name:   <%=task.getTaskName()%></th>
-                                    <th>Task ID:   <%=task.getId()%></th>
-                                    <form method="post">
-                                    <th><button type="submit" name="taskId" value="<%=task.getId()%>" class="w3-btn w3-round-large" onclick="location.href='/taskOpen'">to Open Task</button></th>
-                                    </form>
-
+                                     <th>Task Name:   <%=task.getTaskName()%></th>
+                                     <th>Task ID:   <%=task.getId()%></th>
+                                     <th>Task Descriptions: <%=task.getDescription()%></th>
+                                     <th>Project ID for Task:   <%=task.getProjectId()%></th>
+                                     <form method="post">
+                                     <th><button type="submit" name="taskId" value="<%=task.getId()%>" class="w3-btn w3-round-large" >to Open Task</button></th>
+                                     </form>
                                   </tr>
                                </table>
 

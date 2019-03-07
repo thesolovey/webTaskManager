@@ -32,6 +32,11 @@
                       <label>Project Name:
                           <input type="text" name="Project Name" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
                       </label>
+
+                      <label>Project Description:
+                          <input type="text" name="Description" class="w3-input w3-animate-input w3-border w3-round-large" style="width: 30%"><br />
+                      </label>
+
                 <button type="submit" class="w3-btn w3-blue w3-round-large w3-margin-bottom">Submit</button>
                   </form>
             </div>

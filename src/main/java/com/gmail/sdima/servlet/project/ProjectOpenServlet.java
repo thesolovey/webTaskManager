@@ -3,7 +3,6 @@ package com.gmail.sdima.servlet.project;
 import com.gmail.sdima.Bootstrap;
 import com.gmail.sdima.entity.Project;
 import com.gmail.sdima.repository.ProjectRepository;
-
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

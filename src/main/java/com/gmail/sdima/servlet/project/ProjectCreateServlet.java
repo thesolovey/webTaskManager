@@ -16,6 +16,8 @@ import java.util.UUID;
 @WebServlet("/projectCreate")
 public class ProjectCreateServlet extends HttpServlet {
 
+    private final ProjectRepository projectRepository = Bootstrap.projectRepository;
+
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         final RequestDispatcher requestDispatcher = request.getRequestDispatcher("WEB-INF/views/projectCreate.jsp");
@@ -27,10 +29,11 @@ public class ProjectCreateServlet extends HttpServlet {
 
         final String projectName = request.getParameter("Project Name");
         final String id = UUID.randomUUID().toString();
+        final String description = request.getParameter("Description");
         final Project project = new Project(projectName);
         project.setId(id);
         project.setName(projectName);
-        final ProjectRepository projectRepository = Bootstrap.projectRepository;
+        project.setDescription(description);
         projectRepository.addProject(project);
 
         request.setAttribute("project name", projectName);

@@ -36,22 +36,24 @@ public class ProjectListServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
         final String projectId = request.getParameter("projectId");
-        if (projectId == null) return;
-        List<Task> listForJsp = new ArrayList<>();
-        Project projects = null;
-        final List<Task> taskList = taskRepositoty.getTaskList();
-        for (Task task: taskList)
-            if (task.getProjectId().equals(projectId)){
-                listForJsp.add(task);
-            }
+        if (projectId != null) {
+            List<Task> listForJsp = new ArrayList<>();
 
-        final List<Project> projectList = projectRepository.getProjectList();
-        for (Project project : projectList)
-            if (project.getId().equals(projectId)) {
-                projects = project;
-            }
-        request.getSession().setAttribute("projects", projects);
-        request.getSession().setAttribute("tasks", listForJsp);
-        response.sendRedirect("projectOpen");
+            Project projects = null;
+            final List<Task> taskList = taskRepositoty.getTaskList();
+            for (Task task : taskList)
+                if (task.getProjectId().equals(projectId)) {
+                    listForJsp.add(task);
+                }
+
+            final List<Project> projectList = projectRepository.getProjectList();
+            for (Project project : projectList)
+                if (project.getId().equals(projectId)) {
+                    projects = project;
+                }
+            request.getSession().setAttribute("projects", projects);
+            request.getSession().setAttribute("tasks", listForJsp);
+            response.sendRedirect("projectOpen");
+        }
     }
 }
