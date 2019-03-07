@@ -6,6 +6,7 @@
     <head>
         <title>PROJECT DELETE</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body class="w3-light-grey">
@@ -31,12 +32,12 @@
         </div>
 
         <div class="w3-container w3-light-grey w3-opacity w3-left-align w3-padding">
-            <button class="w3-btn w3-round-large" onclick="location.href='/'">Back to Main-Menu</button>
+            <button class="w3-btn w3-round-large" onclick="location.href='/'"><i class="fa fa-home"></i> Back to Main-Menu</button>
         </div>
 
         <div class="w3-container w3-light-grey w3-opacity w3-left-align w3-padding">
             <form method="post">
-                <button type="submit" name="projectId" value="<%=project.getId()%>" class="w3-btn w3-round-large w3-red" onclick="location.href='/projectList'">YES DELETE PROJECT</button>
+                <button type="submit" name="projectId" value="<%=project.getId()%>" class="w3-btn w3-round-large w3-red" onclick="location.href='/projectList'">YES DELETE PROJECT <i class="fa fa-trash"></i></button>
             </form>
         </div>
     </body>

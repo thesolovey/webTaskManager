@@ -4,6 +4,7 @@
     <head>
         <title>PROJECT CREATE</title>
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
 
     <body class="w3-light-grey">
@@ -43,11 +44,11 @@
         </div>
 
      <div class="w3-container w3-light-grey w3-opacity w3-left-align w3-padding">
-            <button class="w3-btn w3-round-large" onclick="location.href='/projectList'">Go to Project List</button>
+            <button class="w3-btn w3-round-large" onclick="location.href='/projectList'"><i class="fa fa-search"></i> Go to Project List</button>
      </div>
 
      <div class="w3-container w3-light-grey w3-opacity w3-left-align w3-padding">
-            <button class="w3-btn w3-round-large" onclick="location.href='/'">Back to Main-Menu</button>
+            <button class="w3-btn w3-round-large" onclick="location.href='/'"><i class="fa fa-home"></i> Back to Main-Menu</button>
      </div>
     </body>
 </html>
